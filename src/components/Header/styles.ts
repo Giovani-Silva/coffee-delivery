@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
@@ -8,10 +9,43 @@ export const HeaderContainer = styled.header`
   margin-bottom: 3rem;
   gap: 2rem;
 
+  label {
+    display: none;
+    cursor: pointer;
+    background-color: ${(props) => props.theme['secondary-100']};
+    border-radius: 6px;
+    width: 2rem;
+    height: 2rem;
+
+    svg {
+      color: ${(props) => props.theme['secondary-500']};
+    }
+
+    @media (max-width: 30rem) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  input[type='checkbox'] {
+    position: absolute;
+    left: -100%;
+  }
+
+  input[type='checkbox']:checked ~ nav {
+    display: flex;
+  }
+
   nav {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+
+    @media (max-width: 30rem) {
+      display: none;
+    }
+
     a {
       height: 3rem;
       display: flex;
@@ -57,4 +91,8 @@ export const HeaderContainer = styled.header`
       }
     }
   }
+`;
+
+export const Logo = styled(NavLink)`
+  display: flex;
 `;

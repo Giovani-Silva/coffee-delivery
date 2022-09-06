@@ -1,17 +1,21 @@
-import { MapPin, ShoppingCart } from 'phosphor-react';
+import { DotsThreeVertical, MapPin, ShoppingCart } from 'phosphor-react';
 import { memo } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import logoCoffeeDelivery from '../../assets/coffee-delivery-logo.svg';
-import { HeaderContainer } from './styles';
+import { HeaderContainer, Logo } from './styles';
 
 function HeaderComponent() {
   return (
     <HeaderContainer>
-      <NavLink to="/" title="Home">
+      <Logo to="/" title="Home">
         <img src={logoCoffeeDelivery} alt="" />
-      </NavLink>
+      </Logo>
 
+      <label htmlFor="menu">
+        <DotsThreeVertical size={24} />
+      </label>
+      <input type="checkbox" id="menu" />
       <nav>
         <NavLink to="/location" title="Localização">
           <MapPin size={32} />
