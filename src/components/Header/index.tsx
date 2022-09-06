@@ -12,11 +12,11 @@ function HeaderComponent() {
 
       <nav>
         <NavLink to="/location" title="Localização">
-          <MapPin size={32} color="#8047F8" />
+          <MapPin size={32} />
           <span>São Bernardo do Campo, SP</span>
         </NavLink>
         <NavLink to="/cart" title="Carrinho">
-          <ShoppingCart size={24} color="#C47F17" />
+          <ShoppingCart size={24} />
         </NavLink>
       </nav>
     </HeaderContainer>

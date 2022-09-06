@@ -19,43 +19,43 @@ export const HeaderContainer = styled.header`
       align-items: center;
       color: ${(props) => props.theme['gray-500']};
       border-radius: 6px;
-      border-top: 3px solid transparent;
-      border-bottom: 3px solid transparent;
       padding: 0 1rem;
-      &:hover {
-        border-bottom: 3px solid ${(props) => props.theme['gray-500']};
-      }
-      &.active {
-        color: ${(props) => props.theme['gray-500']};
-      }
+      transition: color 150ms ease-in-out, background 150ms ease-in-out;
 
       &:first-child {
         background: ${(props) => props.theme['secondary-100']};
 
+        svg,
         span {
           color: ${(props) => props.theme['secondary-400']};
-        }
-
-        &:hover {
-          border-bottom: 3px solid ${(props) => props.theme['secondary-500']};
-        }
-
-        &.active {
-          background: ${(props) => props.theme['secondary-500']};
-          span {
-            color: ${(props) => props.theme['secondary-100']};
-          }
         }
       }
       &:last-child {
         background: ${(props) => props.theme['primary-100']};
 
-        &:hover {
-          border-bottom: 3px solid ${(props) => props.theme['primary-500']};
+        svg {
+          color: ${(props) => props.theme['primary-400']};
         }
-        &.active {
+      }
+
+      &:hover {
+        &:first-child {
+          svg,
+          span {
+            color: ${(props) => props.theme['white']};
+          }
+          background: ${(props) => props.theme['secondary-500']};
+        }
+        &:last-child {
+          svg,
+          span {
+            color: ${(props) => props.theme['white']};
+          }
           background: ${(props) => props.theme['primary-500']};
         }
+      }
+      &.active {
+        color: ${(props) => props.theme['gray-500']};
       }
     }
   }
