@@ -38,7 +38,8 @@ export const HeaderContainer = styled.header`
         }
       }
 
-      &:hover {
+      &:hover,
+      &.active {
         &:first-child {
           svg,
           span {
@@ -53,9 +54,6 @@ export const HeaderContainer = styled.header`
           }
           background: ${(props) => props.theme['primary-500']};
         }
-      }
-      &.active {
-        color: ${(props) => props.theme['gray-500']};
       }
     }
   }
