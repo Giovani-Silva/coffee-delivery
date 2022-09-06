@@ -8,7 +8,9 @@ import { HeaderContainer } from './styles';
 function HeaderComponent() {
   return (
     <HeaderContainer>
-      <img src={logoCoffeeDelivery} alt="" />
+      <NavLink to="/" title="Home">
+        <img src={logoCoffeeDelivery} alt="" />
+      </NavLink>
 
       <nav>
         <NavLink to="/location" title="Localização">
