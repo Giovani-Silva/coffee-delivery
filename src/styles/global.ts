@@ -21,6 +21,14 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
   }
 
+  h1 {
+    font-size: clamp(1.25rem, -0.875rem + 8.333vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.10rem, -0.875rem + 8.333vw, 2rem);
+  }
+
   a{
     text-decoration: none;
   }
