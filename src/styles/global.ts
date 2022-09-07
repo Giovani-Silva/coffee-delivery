@@ -21,12 +21,20 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
   }
 
+  h1, h2, h3 {
+     font-family: 'Baloo 2', cursive;
+  }
+
   h1 {
     font-size: clamp(1.25rem, -0.875rem + 8.333vw, 3rem);
   }
 
   h2 {
     font-size: clamp(1.10rem, -0.875rem + 8.333vw, 2rem);
+  }
+
+  3 {
+    font-size: clamp(1rem, -0.875rem + 8.333vw, 1.5rem);
   }
 
   a{

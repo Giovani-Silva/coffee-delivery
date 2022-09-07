@@ -1,4 +1,4 @@
-import { DotsThreeVertical, MapPin, ShoppingCart } from 'phosphor-react';
+import { DotsThreeVertical, MapPinLine, ShoppingCart } from 'phosphor-react';
 import { memo } from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -18,7 +18,7 @@ function HeaderComponent() {
       <input type="checkbox" id="menu" />
       <nav>
         <NavLink to="/location" title="Localização">
-          <MapPin size={32} />
+          <MapPinLine size={32} />
           <span>São Bernardo do Campo, SP</span>
         </NavLink>
         <NavLink to="/cart" title="Carrinho">
