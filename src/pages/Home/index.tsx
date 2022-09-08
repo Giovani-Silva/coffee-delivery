@@ -1,6 +1,6 @@
 import { Alarm, Coffee, Package, ShoppingCart } from 'phosphor-react';
 import coffeBanner from '../../assets/coffe-banner.svg';
-import { Banner, Content } from './styles';
+import { Banner, Card, Content, IconWrapper, ListIcons } from './styles';
 
 export function Home() {
   return (
@@ -10,37 +10,57 @@ export function Home() {
           <h1>Encontre o café perfeito para qualquer hora do dia</h1>
           <p>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</p>
 
-          <ul>
+          <ListIcons>
             <li>
-              <span>
+              <IconWrapper>
                 <ShoppingCart size={16} />
-              </span>
-              <span>Compra simples e segura</span>
+              </IconWrapper>
+              Compra simples e segura
             </li>
             <li>
-              <span>
+              <IconWrapper>
                 <Alarm size={16} />
-              </span>
-              <span>Entrega rápida e rastreada</span>
+              </IconWrapper>
+              Entrega rápida e rastreada
             </li>
             <li>
-              <span>
+              <IconWrapper>
                 <Package size={16} />
-              </span>
-              <span>Embalagem mantém o café intacto</span>
+              </IconWrapper>
+              Embalagem mantém o café intacto
             </li>
             <li>
-              <span>
+              <IconWrapper>
                 <Coffee size={16} />
-              </span>
-              <span>O café chega fresquinho até você</span>
+              </IconWrapper>
+              O café chega fresquinho até você
             </li>
-          </ul>
+          </ListIcons>
         </Content>
         <div>
-          <img src={coffeBanner} alt="Voffe delivery banner" />
+          <img src={coffeBanner} alt="coffe delivery banner" />
         </div>
       </Banner>
+
+      <h2>Nossos cafés</h2>
+
+      <ul>
+        <Card>
+          <img src="../../../public/coffees/arabe.svg" alt="arabe" />
+          <span>Tradicional</span>
+          <h3>Expresso tradicional</h3>
+          <p>O tradicional café feito com água quente e grãos moídos</p>
+          <div>
+            <span>R$ 9,90</span>
+            <form>
+              <input type="number" />
+              <button>
+                <ShoppingCart size={16} />
+              </button>
+            </form>
+          </div>
+        </Card>
+      </ul>
     </main>
   );
 }
