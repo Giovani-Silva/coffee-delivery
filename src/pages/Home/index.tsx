@@ -1,8 +1,9 @@
 import { Alarm, Coffee, Package, ShoppingCart } from 'phosphor-react';
 import coffeBanner from '../../assets/coffe-banner.svg';
-import { Banner, Card, Content, IconWrapper, ListIcons } from './styles';
+import { Banner, Card, CardBody, CardFooter, CardHeader, Content, IconWrapper, ListCard, ListIcons, Tag } from './styles';
 
 export function Home() {
+  const itens = [1, 2, 3, 4, 5, 6];
   return (
     <main>
       <Banner>
@@ -41,26 +42,31 @@ export function Home() {
           <img src={coffeBanner} alt="coffe delivery banner" />
         </div>
       </Banner>
-
       <h2>Nossos cafés</h2>
 
-      <ul>
-        <Card>
-          <img src="../../../public/coffees/arabe.svg" alt="arabe" />
-          <span>Tradicional</span>
-          <h3>Expresso tradicional</h3>
-          <p>O tradicional café feito com água quente e grãos moídos</p>
-          <div>
-            <span>R$ 9,90</span>
-            <form>
-              <input type="number" />
-              <button>
-                <ShoppingCart size={16} />
-              </button>
-            </form>
-          </div>
-        </Card>
-      </ul>
+      <ListCard>
+        {itens.map((i) => (
+          <Card key={`item${i}`}>
+            <CardHeader>
+              <img src="../../../public/coffees/arabe.svg" alt="arabe" />
+              <Tag>Tradicional</Tag>
+            </CardHeader>
+            <CardBody>
+              <h3>Expresso tradicional</h3>
+              <p>O tradicional café feito com água quente e grãos moídos</p>
+            </CardBody>
+            <CardFooter>
+              <span>R$ 9,90</span>
+              <form>
+                <input min="1" pattern="\d*" inputMode="numeric" />
+                <button>
+                  <ShoppingCart size={16} />
+                </button>
+              </form>
+            </CardFooter>
+          </Card>
+        ))}
+      </ListCard>
     </main>
   );
 }

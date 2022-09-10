@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Banner = styled.div`
-  margin-top: 2rem;
+  margin: 2rem 0;
   display: grid;
   grid-auto-flow: column;
   gap: 2rem;
@@ -59,7 +59,67 @@ export const IconWrapper = styled.span`
   color: ${(props) => props.theme['gray-100']};
 `;
 
+export const ListCard = styled.ul`
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  margin-top: 3rem;
+`;
 
 export const Card = styled.li`
-display: flex;
-`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px 2rem;
+  background: ${(props) => props.theme['gray-100']};
+  padding: 1.5rem;
+  width: min-content;
+  position: relative;
+
+  h3 {
+    margin: 0.5rem 0;
+  }
+
+  img {
+    display: block;
+    margin: 1rem auto;
+    margin-top: -3rem;
+
+    &:after {
+      content: '';
+      width: 100px;
+      height: 100px;
+      background: ${(props) => props.theme['gray-300']};
+    }
+  }
+`;
+
+export const Tag = styled.span`
+  text-transform: uppercase;
+  font-size: 0.625rem;
+  color: ${(props) => props.theme['primary-400']};
+  background: ${(props) => props.theme['primary-100']};
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 16px;
+
+  &:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+`;
+
+export const CardHeader = styled.div`
+  text-align: center;
+  margin-bottom: 1rem;
+`;
+
+export const CardBody = styled.div`
+  text-align: center;
+  margin-bottom: 2rem;
+  p {
+    color: ${(props) => props.theme['gray-600']};
+    font-size: 0.875rem;
+  }
+`;
+
+export const CardFooter = styled.div``;
