@@ -61,7 +61,7 @@ export const IconWrapper = styled.span`
 
 export const ListCard = styled.ul`
   display: grid;
-  gap: 1rem;
+  gap: 3rem 1rem;
   grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
   margin-top: 3rem;
 `;
@@ -73,7 +73,7 @@ export const Card = styled.li`
   border-radius: 6px 2rem;
   background: ${(props) => props.theme['gray-100']};
   padding: 1.5rem;
-  width: min-content;
+  width: min(17.5rem, 100%);
   position: relative;
 
   h3 {
