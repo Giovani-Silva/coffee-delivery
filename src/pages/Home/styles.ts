@@ -72,7 +72,7 @@ export const Card = styled.li`
   align-items: center;
   border-radius: 6px 2rem;
   background: ${(props) => props.theme['gray-100']};
-  padding: 1.5rem;
+  padding: 1.25rem;
   width: min(17.5rem, 100%);
   position: relative;
 
@@ -102,6 +102,7 @@ export const Tag = styled.span`
   font-weight: bold;
   padding: 0.5rem;
   border-radius: 16px;
+  margin-top: auto;
 
   &:not(:first-child) {
     margin-left: 0.5rem;
@@ -109,8 +110,11 @@ export const Tag = styled.span`
 `;
 
 export const CardHeader = styled.div`
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 1rem;
+  min-height: 5rem;
 `;
 
 export const CardBody = styled.div`
@@ -122,4 +126,35 @@ export const CardBody = styled.div`
   }
 `;
 
-export const CardFooter = styled.div``;
+export const CardFooter = styled.div`
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  form {
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+
+export const AddCard = styled.button`
+  width: 2rem;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: ${(props) => props.theme['secondary-500']};
+  cursor: pointer;
+  &:focus {
+    box-shadow: none;
+  }
+  &:hover {
+    background: ${(props) => props.theme['secondary-400']};
+  }
+
+  svg {
+    color: ${(props) => props.theme['gray-100']};
+  }
+`;

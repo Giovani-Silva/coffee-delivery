@@ -1,7 +1,7 @@
 import { Alarm, Coffee, Package, ShoppingCart } from 'phosphor-react';
 import coffeBanner from '../../assets/coffe-banner.svg';
 import { Stepper } from '../../components/Stepper';
-import { Banner, Card, CardBody, CardFooter, CardHeader, Content, IconWrapper, ListCard, ListIcons, Tag } from './styles';
+import { AddCard, Banner, Card, CardBody, CardFooter, CardHeader, Content, IconWrapper, ListCard, ListIcons, Tag } from './styles';
 
 export function Home() {
   const itens = [1, 2, 3, 4, 5, 6];
@@ -60,9 +60,9 @@ export function Home() {
               <span>R$ 9,90</span>
               <form>
                 <Stepper />
-                <button>
+                <AddCard type="button">
                   <ShoppingCart size={16} />
-                </button>
+                </AddCard>
               </form>
             </CardFooter>
           </Card>
