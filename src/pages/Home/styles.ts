@@ -1,14 +1,33 @@
 import styled from 'styled-components';
 
 export const Banner = styled.div`
-  margin: 2rem 0;
+  margin: 2rem 0 6rem;
   display: grid;
   grid-auto-flow: column;
   gap: 2rem;
+  position: relative;
 
   @media (max-width: 30rem) {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    background: linear-gradient(135deg, #4b2995, #8047f8, #ebc136, #c47f17);
+    z-index: 0;
+    filter: blur(100px);
+    opacity: 0.3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  div {
+    z-index: 1;
   }
 
   img {
