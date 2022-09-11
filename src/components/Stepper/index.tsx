@@ -6,8 +6,6 @@ export function Stepper() {
   const [value, setValue] = useState(1);
 
   function handleValue(value: number) {
-    console.log(value);
-
     if (value < 0) {
       setValue(1);
       return;
@@ -18,13 +16,14 @@ export function Stepper() {
   }
 
   function handleClick(stepperValue: number) {
-    console.log(value);
     if (value > 1 && stepperValue < 0) {
       handleValue(stepperValue + value);
       return;
+    } else if (value === 1 && stepperValue < 0) {
+      stepperValue = 0;
     }
 
-    handleValue(value + stepperValue);
+    handleValue(stepperValue + value);
   }
 
   return (
