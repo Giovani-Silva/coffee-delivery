@@ -136,6 +136,17 @@ export const CardFooter = styled.div`
     display: flex;
     justify-content: space-between;
   }
+
+  & > span:first-child {
+    font-size: 0.625rem;
+    color: ${(props) => props.theme['gray-600']};
+  }
+  & > span ~ span {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: ${(props) => props.theme['gray-700']};
+  }
 `;
 
 export const AddCard = styled.button`

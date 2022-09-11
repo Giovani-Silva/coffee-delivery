@@ -57,7 +57,8 @@ export function Home() {
               <p>O tradicional café feito com água quente e grãos moídos</p>
             </CardBody>
             <CardFooter>
-              <span>R$ 9,90</span>
+              <span>R$</span>
+              <span>9,90</span>
               <form>
                 <Stepper />
                 <AddCard type="button">
