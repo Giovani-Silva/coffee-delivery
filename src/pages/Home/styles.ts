@@ -92,7 +92,6 @@ export const Card = styled.li`
   border-radius: 6px 2rem;
   background: ${(props) => props.theme['gray-100']};
   padding: 1.25rem;
-  width: min(17.5rem, 100%);
   position: relative;
 
   h3 {
