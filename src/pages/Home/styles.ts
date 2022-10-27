@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const Main = styled.main`
+  width: min(980px, 100%);
+  margin: 0 auto;
+`;
+
 export const Banner = styled.div`
   margin: 2rem 0 6rem;
   display: grid;
@@ -80,8 +85,8 @@ export const IconWrapper = styled.span`
 
 export const ListCard = styled.ul`
   display: grid;
-  gap: 3rem 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  gap:4rem;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   margin-top: 3rem;
 `;
 

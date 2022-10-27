@@ -1,12 +1,12 @@
 import { Alarm, Coffee, Package, ShoppingCart } from 'phosphor-react';
 import coffeBanner from '../../assets/coffe-banner.svg';
 import { Stepper } from '../../components/Stepper';
-import { AddCard, Banner, Card, CardBody, CardFooter, CardHeader, Content, IconWrapper, ListCard, ListIcons, Tag } from './styles';
+import { Main, AddCard, Banner, Card, CardBody, CardFooter, CardHeader, Content, IconWrapper, ListCard, ListIcons, Tag } from './styles';
 
 export function Home() {
   const itens = [1, 2, 3, 4, 5, 6];
   return (
-    <main>
+    <Main>
       <Banner>
         <Content>
           <h1>Encontre o café perfeito para qualquer hora do dia</h1>
@@ -69,6 +69,6 @@ export function Home() {
           </Card>
         ))}
       </ListCard>
-    </main>
+    </Main>
   );
 }
